@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vsrikyweb": {
+      "hosting": {
+        "VSRikyWeb": [
+          "vsrikyweb"
+        ]
+      }
+    }
+  }
+}
