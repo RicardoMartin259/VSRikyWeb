@@ -1,0 +1,29 @@
+<div class="card mt-3 text-center">
+    <div class="card-header">
+        <h5 class="card-title">DATOS DEL CLIENTE</h5>
+    </div>
+    <div class="card-body">
+       <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            {{customer.docType}}: <h5>{{customer.docNum}}</h5> 
+        </li>
+        <li class="list-group-item">
+            Nombre/Razón Social: <h5>{{customer.name}}</h5> 
+        </li>
+        <li class="list-group-item">
+            Celular: <h5>{{customer.phone}}</h5> 
+        </li>
+        <li class="list-group-item">
+            Email: <h5>{{customer.email}}</h5> 
+        </li>
+        <li class="list-group-item">
+            Dirección: <h5>{{customer.address}}</h5> 
+        </li>
+       </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-primary mt-3 mb-3 ms-3" (click)="onEdit()">Editar</button>
+        <button type="button" class="btn btn-outline-danger mt-3 mb-3 me-3" (click)="onDelete()">Eliminar</button>
+      </div>
+</div>
+<button type="button" class="btn btn-outline-secondary mt-3" (click)="onBackToList()">Regresar</button>

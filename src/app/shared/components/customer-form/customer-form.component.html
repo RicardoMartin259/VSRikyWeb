@@ -1,0 +1,42 @@
+<form class="mt-3 col-md-8 offset-md-2" (ngSubmit)="onSave()" [formGroup]="customerForm">
+    
+    <div class="row mt-2">
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Tipo Documento" formControlName="docType">
+
+        </div>
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Número Documento" formControlName="docNum">
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Nombre/Razón Social" formControlName="name">
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Telefono/Celular" formControlName="phone">
+        </div>
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Correo Electrónico" formControlName="email">
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Dirección" formControlName="address">
+        </div>
+    </div>
+    
+    <div class="row mt-2">
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+    
+
+</form>
+
+<button type="button" class="btn btn-outline-secondary mt-3" (click)="onBackToList()">Regresar</button>

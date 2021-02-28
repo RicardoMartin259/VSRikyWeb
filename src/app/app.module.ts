@@ -6,15 +6,21 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore'
 import { environment } from 'src/environments/environment';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { HeaderModule } from './shared/components/header/header.module';
+import { CustomerFormModule } from './shared/components/customer-form/customer-form.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    HeaderModule,
+    CustomerFormModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
