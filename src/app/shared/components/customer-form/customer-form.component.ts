@@ -56,6 +56,12 @@ export class CustomerFormComponent implements OnInit {
     });
   }
 
+  isValidField(field: string): string {
+    const validatedField = this.customerForm.get(field);
+    return (!validatedField.valid && validatedField.touched)
+      ? 'is-invalid' : validatedField.touched ? 'is-valid': '';
+  }
+
   onBackToList(): void{
     this.router.navigate(['customersList']);
   }

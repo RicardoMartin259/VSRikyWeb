@@ -26,4 +26,38 @@
         <button type="button" class="btn btn-outline-danger mt-3 mb-3 me-3" (click)="onDelete()">Eliminar</button>
       </div>
 </div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" > <h5>Listado de vehículos</h5></a>
+        <button type="button" class="btn btn-success" [routerLink]="['/customersNew']">Nuevo</button>
+    </div>
+</nav>
+
+<table class="table table-sm mt-3">
+    <div class="table-responsive">
+        <table class="table align-middle table-hover table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Vehículo</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+                </thead>
+            <tbody>
+                <tr class="table-light" *ngFor="let vehicle of [0,1,2,3,4]">
+                    <td scope="row">{{vehicle.name}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" >
+                            <button type="button" class="btn btn-outline-danger" (click)="onDelete(customer.id)">Eliminar</button>
+                            <button type="button" class="btn btn-outline-primary" (click)="onDetails(customer)">Detalles</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</table>
+
+
 <button type="button" class="btn btn-outline-secondary mt-3" (click)="onBackToList()">Regresar</button>
